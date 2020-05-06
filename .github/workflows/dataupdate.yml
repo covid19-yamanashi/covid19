@@ -1,0 +1,22 @@
+name: update data.json
+
+on:
+  repository_dispatch:
+    types: [create_pr]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Copy data.json
+        run: curl -o data/data.json https://raw.githubusercontent.com/daisuke19891023/covid19-yamanashi-scraping/master/data.json
+      
+      - name: Commit files
+        run: |
+          git config --local user.name "Scraping Bot"
+          git status | grep modified && git add data/data.json && git commit -v -m "[Bot] GitHub Actions - update data.json at $(date +'%Y-%m-%d')"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v2.7.1
