@@ -1,16 +1,23 @@
 <template>
   <div class="Worker">
     <h2 class="Worker-Heading">
-      企業の皆様・はたらく皆様へ
+      {{ $t('企業の皆様・はたらく皆様へ') }}
     </h2>
     <div v-for="(item, i) in items" :key="i">
-      <TextCard :title="item.title" :link="item.link" :body="item.body" />
+      <TextCard
+        :title="$t(item.title)"
+        :link="item.link"
+        :body="$t(item.body)"
+      />
     </div>
   </div>
 </template>
 <script lang="ts">
+import Vue from 'vue'
+import { MetaInfo } from 'vue-meta'
 import TextCard from '@/components/TextCard.vue'
-export default {
+
+export default Vue.extend({
   components: {
     TextCard
   },
@@ -66,25 +73,27 @@ export default {
         },
         {
           title: '農業者の皆様へ',
-          link: 'https://www.pref.yamanashi.jp/koucho/coronavirus/documents/consultatiion_agri.pdf',
+          link:
+            'https://www.pref.yamanashi.jp/koucho/coronavirus/documents/consultatiion_agri.pdf',
           body:
             '新型コロナウイルスの影響を受けた農業者の皆さまの経営や資金繰り等に関する相談窓口の案内です。'
         },
         {
           title: '水産漁業者の皆様へ',
-          link: 'https://www.pref.yamanashi.jp/koucho/coronavirus/documents/suisan_2.pdf',
+          link:
+            'https://www.pref.yamanashi.jp/koucho/coronavirus/documents/suisan_2.pdf',
           body:
             '新型コロナウイルスの影響を受けた水産漁業者の皆さまの経営や資金繰り等に関する相談窓口の案内です。'
         }
       ]
     }
   },
-  head() {
+  head(): MetaInfo {
     return {
-      title: '企業の皆様・はたらく皆様へ'
+      title: this.$t('企業の皆様・はたらく皆様へ') as string
     }
   }
-}
+})
 </script>
 <style lang="scss">
 .Worker {

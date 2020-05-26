@@ -17,7 +17,6 @@
         </h1>
       </nuxt-link>
     </div>
-    <v-divider class="SideNavigation-HeadingDivider" />
     <div class="sp-none" :class="{ open: isNaviOpen }">
       <v-icon
         class="SideNavigation-ListContainerIcon pc-none"
@@ -26,6 +25,8 @@
       >
         mdi-close
       </v-icon>
+      <LanguageSelector />
+      <v-divider class="SideNavigation-HeadingDivider" />
       <v-list :flat="true">
         <v-container
           v-for="(item, i) in items"
@@ -60,8 +61,9 @@
             target="_blank"
             href="http://creativecommons.org/licenses/by/4.0/"
           >
-            Creative Commons Attribution 4.0 International License </a
-          ><br />
+            Creative Commons Attribution 4.0 International License
+          </a>
+          <br />
           © 2020 stopcovid19.yamanashi.dev
         </small>
       </div>
@@ -69,37 +71,14 @@
   </div>
 </template>
 
-<i18n>
-{
-  "ja": {
-    "Navi Open": "サイドメニュー項目を開く",
-    "Navi Close": "サイドメニュー項目を閉じる",
-    "Yamanashi": "山梨県",
-    "COVID-19": "新型コロナウイルス感染症",
-    "Measures site": "対策サイト",
-    "Tokyo Metropolitan Government": "東京都",
-    "Tokyo COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
-    "The latest updates": "県内の最新感染動向",
-    "If you feel concerned about COVID-19": "新型コロナウイルス感染症が心配なときに",
-    "for Citizens": "山梨県による総合情報",
-    "for Families with children": "お子様をお持ちの皆様へ",
-    "for Enterprises and Employees": "企業の皆様・はたらく皆様へ",
-    "for Lodging business": "宿泊事業者の皆様へ",
-    "Information from Municipalities": "各市町村からの情報",
-    "Message from Governor Nagasaki": "知事からのメッセージ",
-    "Government official website": "山梨県公式ホームページ",
-    "Government official Twitter": "山梨県新型コロナウイルス対策 Twitter",
-    "About us": "当サイトについて"
-  }
-}
-</i18n>
-
 <script>
 import ListItem from '@/components/ListItem'
+import LanguageSelector from '@/components/LanguageSelector'
 
 export default {
   components: {
-    ListItem
+    ListItem,
+    LanguageSelector
   },
   props: {
     isNaviOpen: {
@@ -119,7 +98,8 @@ export default {
         {
           icon: 'covid',
           title: this.$t('If you feel concerned about COVID-19'),
-          link: 'https://www.pref.yamanashi.jp/koucho/coronavirus/documents/soudanmeyasu.pdf',
+          link:
+            'https://www.pref.yamanashi.jp/koucho/coronavirus/documents/soudanmeyasu.pdf',
           divider: true
         },
         {

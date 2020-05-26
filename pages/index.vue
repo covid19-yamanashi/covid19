@@ -2,20 +2,20 @@
   <div class="MainPage">
     <page-header
       :icon="headerItem.icon"
-      :title="headerItem.title"
+      :title="$t(headerItem.title)"
       :date="headerItem.date"
     />
     <whats-new class="mb-4" :items="newsItems" />
     <static-info
       class="mb-4"
       :url="'/flow'"
-      :text="'自分や家族の症状に不安や心配があればまずは電話相談をどうぞ'"
-      :btn-text="'相談の手順を見る'"
+      :text="$t('自分や家族の症状に不安や心配があればまずは電話相談をどうぞ')"
+      :btn-text="$t('相談の手順を見る')"
     />
     <v-row class="DataBlock">
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
-          title="陽性患者数"
+          :title="$t('陽性患者数')"
           :title-id="'number-of-confirmed-cases'"
           :chart-id="'time-bar-chart-patients'"
           :chart-data="patientsGraph"
@@ -28,7 +28,7 @@
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <data-table
-          :title="'陽性患者の属性'"
+          :title="$t('陽性患者の属性')"
           :title-id="'attributes-of-confirmed-cases'"
           :chart-data="patientsTable"
           :chart-option="{}"
@@ -41,7 +41,7 @@
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
-          title="県内の疑似症例の検査状況"
+          :title="$t('県内の疑似症例の検査状況')"
           :title-id="'number-of-tested'"
           :chart-id="'time-stacked-bar-chart-inspections'"
           :chart-data="inspectionsGraph"
@@ -54,7 +54,7 @@
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
-          title="帰国者・接触者相談センター相談件数"
+          :title="$t('帰国者・接触者相談センター相談件数')"
           :title-id="'number-of-reports-to-covid19-consultation-desk'"
           :chart-id="'time-bar-chart-querents'"
           :chart-data="querentsGraph"
@@ -67,7 +67,7 @@
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
-          title="新型コロナウイルス感染症専用相談ダイヤル相談件数"
+          :title="$t('新型コロナウイルス感染症専用相談ダイヤル相談件数')"
           :title-id="'number-of-reports-to-covid19-telephone-advisory-center'"
           :chart-id="'time-bar-chart-contacts'"
           :chart-data="contactsGraph"
@@ -82,7 +82,8 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { MetaInfo } from 'vue-meta'
 import PageHeader from '@/components/PageHeader.vue'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
@@ -132,7 +133,8 @@ export default {
       lText: patientsGraph[
         patientsGraph.length - 1
       ].cumulative.toLocaleString(),
-      sText: patientsGraph[patientsGraph.length - 1].label + 'の累計',
+      sText: 'の累計',
+      date: patientsGraph[patientsGraph.length - 1].label,
       unit: '人'
     }
 
@@ -156,9 +158,9 @@ export default {
     }
     return data
   },
-  head() {
+  head(): MetaInfo {
     return {
-      title: '県内の最新感染動向'
+      title: this.$t('県内の最新感染動向') as string
     }
   }
 }

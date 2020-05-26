@@ -121,10 +121,20 @@ const config: Configuration = {
       'nuxt-i18n',
       {
         strategy: 'no_prefix',
+        langDir: 'assets/locales/',
+        lazy: true,
         locales: [
           {
             code: 'ja',
-            iso: 'ja-JP'
+            file: 'ja.json',
+            iso: 'ja-JP',
+            name: '日本語'
+          },
+          {
+            code: 'en',
+            file: 'en.json',
+            iso: 'en-US',
+            name: 'English'
           }
         ],
         defaultLocale: 'ja',

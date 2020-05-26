@@ -1,15 +1,21 @@
 <template>
   <div class="Lodging">
     <h2 class="Lodging-Heading">
-      宿泊事業者の皆さまへ
+      {{ $t('宿泊事業者の皆さまへ') }}
     </h2>
     <div v-for="(item, i) in items" :key="i">
-      <TextCard :title="item.title" :link="item.link" :body="item.body" />
+      <TextCard
+        :title="$t(item.title)"
+        :link="item.link"
+        :body="$t(item.body)"
+      />
     </div>
   </div>
 </template>
 <script lang="ts">
+import { MetaInfo } from 'vue-meta'
 import TextCard from '@/components/TextCard.vue'
+
 export default {
   components: {
     TextCard
@@ -34,9 +40,9 @@ export default {
       ]
     }
   },
-  head() {
+  head(): MetaInfo {
     return {
-      title: '宿泊事業者の皆さまへ'
+      title: this.$t('宿泊事業者の皆さまへ') as string
     }
   }
 }

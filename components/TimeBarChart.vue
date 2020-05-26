@@ -85,18 +85,23 @@ export default {
       if (this.dataKind === 'transition') {
         return {
           lText: `${this.chartData.slice(-1)[0].transition.toLocaleString()}`,
-          sText: `実績値（前日比：${this.displayTransitionRatio} ${this.unit}）`,
-          unit: this.unit
+          sText: `${this.$t('実績値')}（${this.$t('前日比')}：${
+            this.displayTransitionRatio
+          } ${this.$tc(this.unit, this.displayTransitionRatio)}）`,
+          unit: this.$tc(this.unit, parseInt(this.chartData.slice(-1)[0]))
         }
       }
       return {
         lText: this.chartData[
           this.chartData.length - 1
         ].cumulative.toLocaleString(),
-        sText: `${this.chartData.slice(-1)[0].label} 累計値（前日比：${
+        sText: `${this.chartData.slice(-1)[0].label} ${this.$t(
+          '累計値'
+        )}（${this.$t('前日比')}：${this.displayCumulativeRatio} ${this.$tc(
+          this.unit,
           this.displayCumulativeRatio
-        } ${this.unit}）`,
-        unit: this.unit
+        )}）`,
+        unit: this.$tc(this.unit, parseInt(this.chartData.slice(-1)[0]))
       }
     },
     displayData() {
@@ -134,7 +139,19 @@ export default {
       }
     },
     displayOption() {
+      /* eslint-disable no-unused-vars */
+      /* eslint-disable @typescript-eslint/no-unused-vars */
+      /*
+       * displayOption内の値が変更されたときにグラフを再レンダリングすることで横軸が言語切り替えと同時に翻訳されるために必要
+       * もしこれがなくても同時に変わるようであれば削除してください
+       */
+      const watcher = this.$t(this.unit)
+      /* eslint-enable @typescript-eslint/no-unused-vars */
+      /* eslint-enable no-unused-vars */
+
       const unit = this.unit
+      // コールバック内では呼び出すことができないので保管
+      const ctx = this
       const scaledTicksYAxisMax = this.scaledTicksYAxisMax
       return {
         tooltips: {
@@ -142,13 +159,14 @@ export default {
           callbacks: {
             label(tooltipItem) {
               const labelText =
-                parseInt(tooltipItem.value).toLocaleString() + unit
+                parseInt(tooltipItem.value).toLocaleString() +
+                ctx.$tc(unit, parseInt(tooltipItem.value))
               return labelText
             },
             title(tooltipItem, data) {
               return data.labels[tooltipItem[0].index].replace(
                 /(\w+)\/(\w+)/,
-                '$1月$2日'
+                '$1/$2'
               )
             }
           }
@@ -193,29 +211,33 @@ export default {
                 fontStyle: 'bold',
                 gridLines: {
                   display: true
-                },
-                callback: label => {
-                  const monthStringArry = [
-                    'Jan',
-                    'Feb',
-                    'Mar',
-                    'Apr',
-                    'May',
-                    'Jun',
-                    'Jul',
-                    'Aug',
-                    'Sep',
-                    'Oct',
-                    'Nov',
-                    'Dec'
-                  ]
-                  const month = monthStringArry.indexOf(label.split(' ')[0]) + 1
-                  return month + '月'
                 }
+                //                callback: label => {
+                //                  const monthStringArry = [
+                //                    'Jan',
+                //                    'Feb',
+                //                    'Mar',
+                //                    'Apr',
+                //                    'May',
+                //                    'Jun',
+                //                    'Jul',
+                //                    'Aug',
+                //                    'Sep',
+                //                    'Oct',
+                //                    'Nov',
+                //                    'Dec'
+                //                  ]
+                //                  const month = monthStringArry.indexOf(label.split(' ')[0]) + 1
+                //                  return month + '月'
+                //                }
               },
               type: 'time',
               time: {
-                unit: 'month'
+                unit: 'month',
+                parser: 'M/D',
+                displayFormats: {
+                  month: 'MMM'
+                }
               }
             }
           ],

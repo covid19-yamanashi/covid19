@@ -15,7 +15,7 @@
       <div :class="$style.FlowItem">
         <template v-if="!langsNeedReversedOrder.includes($i18n.locale)">
           <strong :class="$style.FlowTitle">
-            {{ $t('「新型コロナウィルス感染者」と') }}
+            {{ $t('「新型コロナウイルス感染者」と') }}
           </strong>
           <i18n
             tag="span"

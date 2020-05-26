@@ -25,7 +25,9 @@
         <slot />
       </div>
       <v-footer class="DataView-Footer">
-        <time :datetime="date">{{ date }} 更新</time>
+        <time :datetime="date">
+          {{ $t('{date} 更新', { date }) }}
+        </time>
         <a
           v-if="url"
           class="OpenDataLink"
@@ -33,7 +35,7 @@
           target="_blank"
           rel="noopener"
         >
-          出典: 山梨県ウェブサイト
+          {{ $t('出典: 山梨県ウェブサイト') }}
           <v-icon class="ExternalLinkIcon" size="15">
             mdi-open-in-new
           </v-icon>
@@ -103,7 +105,7 @@ export default class DataView extends Vue {
     flex-flow: column;
     color: $gray-2;
     &.with-infoPanel {
-      width: calc(100% - 11em);
+      width: calc(100% - 15em);
     }
   }
   &-Title {
