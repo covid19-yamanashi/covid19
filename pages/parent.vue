@@ -25,7 +25,7 @@ export default {
         {
           title: '2 感染症を疑う場合の対応',
           body:
-            '〇  風邪の症状や、37.5度以上の発熱が４日以上続いている、強いだるさ（倦怠感）、息苦しさ（呼吸困難）がある場合は、各保健所にご相談ください。<br /><a href="https://www.pref.yamanashi.jp/koucho/coronavirus/documents/20200306newcoronasentoutelfax.pdf" target="_blank" rel="noopener">〇  新型コロナウイルス感染症専用相談ダイヤル</a>'
+            '〇  風邪の症状や、37.5度以上の発熱が４日以上続いている、強いだるさ（倦怠感）、息苦しさ（呼吸困難）がある場合は、各保健所にご相談ください。<br /><a href="https://www.pref.yamanashi.jp/koucho/coronavirus/info_coronavirus_consultation.html#Covid19_GeneralConsultation" target="_blank" rel="noopener">〇  新型コロナウイルス感染症専用相談ダイヤル</a>'
         },
         {
           title: '3 学校の臨時休校について',

@@ -25,9 +25,9 @@ export default {
             '山梨県内の宿泊施設における新型コロナウイルス感染症への対応については下記をご覧ください。'
         },
         {
-          title: '笛吹市：宿泊料金割引事業',
+          title: '笛吹市：宿泊料金割引事業（延期）',
           link:
-            'https://www.city.fuefuki.yamanashi.jp/kanko/sangyo/kanko/waribikijigyou.html',
+            'https://www.city.fuefuki.yamanashi.jp/kanko/sangyo/kanko/syukuhakuwaribiki.html',
           body:
             '笛吹市では令和2年4月1日より市内の旅館・ホテルの宿泊料金の割引事業を実施します。'
         }

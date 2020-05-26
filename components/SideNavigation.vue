@@ -119,7 +119,7 @@ export default {
         {
           icon: 'covid',
           title: this.$t('If you feel concerned about COVID-19'),
-          link: '/flow',
+          link: 'https://www.pref.yamanashi.jp/koucho/coronavirus/documents/soudanmeyasu.pdf',
           divider: true
         },
         {
