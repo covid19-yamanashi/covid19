@@ -8,7 +8,7 @@ const headers = [
 ]
 
 type DataType = {
-  リリース日: Date
+  発生判明日: Date
   居住地: string | null
   年代: string | null
   性別: '男性' | '女性'
@@ -34,7 +34,7 @@ export default (data: DataType[]) => {
   }
   data.forEach(d => {
     const TableRow: TableDataType = {
-      日付: dayjs(d['リリース日']).format('MM/DD') ?? '不明',
+      日付: dayjs(d['発生判明日']).format('MM/DD') ?? '不明',
       居住地: d['居住地'] ?? '不明',
       年代: d['年代'] ?? '不明',
       性別: d['性別'] ?? '不明'
