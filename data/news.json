@@ -1,9 +1,44 @@
 {
   "newsItems": [
     {
-      "date": "2020/10/22",
+      "date": "2020/10/31",
       "url": "https://www.pref.yamanashi.jp/koucho/coronavirus/info_coronavirus_prevention.html#Patients",
-      "text": "令和2年10月22日報道資料（203例目）"
+      "text": "令和2年10月31日報道資料（214例目）"
+    },
+    {
+      "date": "2020/10/31",
+      "url": "https://www.pref.yamanashi.jp/shogai-fks/houkatsushienkin/houkatsushien_iroukin.html",
+      "text": "新型コロナウイルス感染症緊急包括支援事業（障害分）"
+    },
+    {
+      "date": "2020/10/23",
+      "url": "https://www.pref.yamanashi.jp/shogai-fks/houkatsushienkin/houkatsushien_iroukin.html",
+      "text": "社会福祉施設等、医療従事者・介護従事者への新型コロナウィルス感染症関係通知"
+    },
+    {
+      "date": "2020/10/13",
+      "url": "https://www.pref.yamanashi.jp/shippei-t/covid-19_epidemiologial_analysis_oct2020.html",
+      "text": "新型コロナウイルス感染症の県内感染者の疫学的分析について"
+    },
+    {
+      "date": "2020/10/06",
+      "url": "https://www.pref.yamanashi.jp/shogai-fks/shingatacoronaboushinotorikumi.html",
+      "text": "新型コロナウイルス感染防止に向けた取り組みについて（福祉保健部 障害福祉課）"
+    },
+    {
+      "date": "2020/09/29",
+      "url": "https://www.pref.yamanashi.jp/koucho/coronavirus/info_coronavirus_emergencymeasures8.html",
+      "text": "新型コロナウイルス感染拡大防止への協力要請について（10月1日から11月30日）"
+    },
+    {
+      "date": "2020/09/24",
+      "url": "https://www.pref.yamanashi.jp/kankyo-sb/keikaku/documents/documents/r1_virus.html",
+      "text": "廃棄物処理における新型コロナウイルスの感染症対策について（医療関係機関、宿泊療養施設、ごみ収集運搬作業）"
+    },
+    {
+      "date": "2020/08/26",
+      "url": "https://www.pref.yamanashi.jp/chouju/actioncard.html",
+      "text": "高齢者施設における新型コロナウイルス感染症患者発生時アクションカード"
     },
     {
       "date": "2020/07/16",
@@ -14,16 +49,6 @@
       "date": "2020/04/22",
       "url": "https://www.pref.yamanashi.jp/shinchaku/gimukyo/0204/ouen.html",
       "text": "児童生徒の学習支援のための「やまなし小・中学生応援サイト」を開設"
-    },
-    {
-      "date": "2020/04/20",
-      "url": "https://www.pref.yamanashi.jp/koucho/coronavirus/info_coronavirus_emergencymeasures.html",
-      "text": "山梨県における緊急事態措置について"
-    },
-     {
-      "date": "2020/04/19",
-      "url": "https://www.pref.yamanashi.jp/koucho/coronavirus/info_coronavirus_gvmessages.html",
-      "text": "県民の皆様への知事からのメッセージ（令和2年4月19日）"
     }
   ]
 }

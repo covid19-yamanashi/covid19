@@ -32,7 +32,7 @@ export default {
         {
           title: '山梨市',
           link:
-            'http://www.city.yamanashi.yamanashi.jp/citizen/docs/korona_COVID-19.html'
+            'https://www.city.yamanashi.yamanashi.jp/citizen/docs/COVID_19_yamanashi_city.html'
         },
         {
           title: '大月市',
@@ -41,7 +41,7 @@ export default {
         },
         {
           title: '韮崎市',
-          link: 'http://www.city.nirasaki.lg.jp/docs/2014012300025/'
+          link: 'https://www.city.nirasaki.lg.jp/kinkyu/new_corona_virus_information.html'
         },
         {
           title: '南アルプス市',
@@ -68,11 +68,21 @@ export default {
         {
           title: '甲州市',
           link:
-            'https://www.city.koshu.yamanashi.jp/kenkou_fukushi_kyouiku/kenkou/detail/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E6%84%9F%E6%9F%93%E7%97%87%E6%83%85%E5%A0%B1'
+            'https://www.city.koshu.yamanashi.jp/'
         },
         {
           title: '中央市',
-          link: 'https://www.city.chuo.yamanashi.jp/kinkyu/7791.html'
+          link: 'https://www.city.chuo.yamanashi.jp/soshiki/seisaku/hisho/oshirase/koronaosirase/index.html'
+        },
+        {
+          title: '市川三郷町',
+          link:
+            'http://www.town.ichikawamisato.yamanashi.jp/02topics/2020-0421-1659-23.html'
+        },
+        {
+          title: '早川町',
+          link:
+            'https://www.town.hayakawa.yamanashi.jp/town/grapple/covid-19.html'
         },
         {
           title: '身延町',
@@ -89,6 +99,51 @@ export default {
           link:
             'https://www.town.fujikawa.yamanashi.jp/life/health/kannsennshou.html'
         },
+        {
+          title: '昭和町',
+          link:
+            'http://www.town.showa.yamanashi.jp/guide/benri.php?cat_id=64'
+        }, 
+        {
+          title: '道志村',
+          link:
+            'http://www.vill.doshi.lg.jp/'
+        }, 
+        {
+          title: '西桂町',
+          link:
+            'http://www.town.nishikatsura.yamanashi.jp/forms/top/top.aspx'
+        }, 
+        {
+          title: '忍野村',
+          link:
+            'https://www.vill.oshino.lg.jp/docs/2020041700019/'
+        }, 
+        {
+          title: '山中湖村',
+          link:
+            'https://www.vill.yamanakako.lg.jp/docs/2020041000027/'
+        }, 
+        {
+          title: '鳴沢村',
+          link:
+            'https://www.vill.narusawa.yamanashi.jp/forms/info/info.aspx?info_id=47235'
+        }, 
+        {
+          title: '富士河口湖町',
+          link:
+            'https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=33'
+        }, 
+        {
+          title: '小菅村',
+          link:
+            'http://www.vill.kosuge.yamanashi.jp/administration/news/2020/07/post-56.php'
+        }, 
+        {
+          title: '丹波山村',
+          link:
+            'http://www.vill.tabayama.yamanashi.jp/kinkyu/2020-0526-1343-1.html'
+        }, 
         {
           body:
             'その他の市町村は各自治体ウェブサイトのニュース欄などをご覧ください。'
