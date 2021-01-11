@@ -1,9 +1,19 @@
 {
   "newsItems": [
     {
-      "date": "2021/01/07",
+      "date": "2021/01/10",
       "url": "https://www.pref.yamanashi.jp/koucho/coronavirus/info_coronavirus_prevention.html#Patients",
-      "text": "令和3年1月7日報道資料（644〜678例目）"
+      "text": "令和3年1月10日報道資料（735〜750例目）"
+    },
+    {
+      "date": "2020/01/08",
+      "url": "https://www.pref.yamanashi.jp/eisei-ykm/singatakorona.html?edit=1",
+      "text": "新型コロナウイルス関係通知集"
+    },
+    {
+      "date": "2020/01/08",
+      "url": "https://www.pref.yamanashi.jp/koucho/coronavirus/info_coronavirus_measures.html",
+      "text": "新型コロナウイルス感染症に関する県の取り組み状況"
     },
     {
       "date": "2020/10/31",
